@@ -5,7 +5,7 @@
 import * as AuthActionTypes from '../actions/auth.actions';
 
 const initialState = {
-  user: [],
+  user: {},
 };
 
 export default (state = initialState, action) => {
@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
     case AuthActionTypes.LOGOUT_USER:
       return {
         ...state,
-        user: [],
+        user: {},
       };
     default:
       return state;
