@@ -5,8 +5,9 @@
 export const LOGIN_USER = 'LOGIN_USER';
 export const LOGOUT_USER = 'LOGOUT_USER';
 
-export const LoginAction = () => ({
+export const LoginAction = payload => ({
   type: LOGIN_USER,
+  payload,
 });
 
 export const LogoutAction = () => ({

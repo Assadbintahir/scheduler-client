@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "axios-response-logger": "^0.1.0",
     "eslint-config-airbnb": "^17.1.0",
+    "formik": "^1.4.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",
