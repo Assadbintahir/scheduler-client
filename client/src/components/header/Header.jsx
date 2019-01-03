@@ -10,17 +10,6 @@ const Header = () => (
           <ul className="topbar-nav">
             <li className="topbar-nav-item relative">
               <span className="user-welcome d-none d-lg-inline-block">Welcome! Stefan Harary</span>
-              <div className="toggle-class dropdown-content dropdown-content-right dropdown-arrow-right user-dropdown">
-                <ul className="user-links bg-light">
-                  <li>
-                    <a href="sign-in.html">
-                      <i className="ti ti-power-off" />
-                      Logout
-                    </a>
-
-                  </li>
-                </ul>
-              </div>
             </li>
             {/* .topbar-nav-item */}
           </ul>

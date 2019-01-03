@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 
 const apiCaller = axios.create({
@@ -17,6 +18,16 @@ apiCaller.interceptors.response.use(
     console.log('%c Request Error:', 'color: #EC6060; font-weight: bold', err);
     return Promise.reject(err);
   },
+);
+
+apiCaller.interceptors.request.use(
+  (config) => {
+    if (Cookies.get('token')) {
+      config.headers.authorization = `Bearer ${Cookies.get('token')}`;
+    }
+    return config;
+  },
+  error => Promise.reject(error),
 );
 
 export default apiCaller;

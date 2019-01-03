@@ -39,3 +39,8 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export const getJobList = jobs => jobs.map((job) => {
+  job.status = (job.isActive) ? 'Active' : 'Not Active';
+  return job;
+});

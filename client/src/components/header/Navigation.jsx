@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { logoutUser } from '../../utils/auth';
 
 const Navigation = () => (
   <div className="navbar">
@@ -6,29 +8,21 @@ const Navigation = () => (
       <div className="d-lg-flex justify-content-between align-items-center w-100">
         <ul className="navbar-menu">
           <li>
-            <a href="index.html">
+            <Link to="/jobs">
               <em className="ikon ikon-dashboard" />
               Dashboard
-            </a>
-
+            </Link>
           </li>
           <li>
-            <a href="buy-token.html">
+            <Link to="/create-job">
               <em className="ikon ikon-coins" />
               Create Jobs
-            </a>
-
-          </li>
-          <li>
-            <a href="ico-distribution.html">
-              <em className="ikon ikon-distribution" />
-              Settings
-            </a>
+            </Link>
 
           </li>
         </ul>
         <ul className="navbar-btns">
-          <li><a href="kyc-application.html" className="btn btn-sm btn-outline btn-light"><span>Logout</span></a></li>
+          <li><button type="button" onClick={logoutUser} className="btn btn-sm btn-outline btn-light"><span>Logout</span></button></li>
         </ul>
       </div>
     </div>

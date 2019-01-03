@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { ToastContainer } from 'react-toastify';
 import Routes from './Routes';
-import 'axios-response-logger';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => (
-  <Routes />
+  <Fragment>
+    <ToastContainer />
+    <Routes />
+  </Fragment>
 );
 export default App;
